@@ -1,0 +1,91 @@
+/* styles.css */
+/* body {
+    font-family: 'Inter', sans-serif;
+    background: url('https://source.unsplash.com/random/1600x900?airplane') no-repeat center center fixed;
+    background-size: cover;
+} */
+
+#calendar {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weekdays div, .days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weekdays {
+    background: #007bff;
+    color: white;
+}
+
+.days div {
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.days div:hover {
+    background: #007bff;
+    color: white;
+}
+
+.selected {
+    background: #007bff;
+    color: white;
+}
+
+.airplane {
+    position: absolute;
+    top: 20%;
+    width: 100px;
+    height: 100px;
+    background: url('/img/gifavion.gif') no-repeat center center;
+    background-size: contain;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.left-to-right {
+    animation: leftToRight 10s linear infinite;
+}
+
+@keyframes leftToRight {
+    0% { left: -100px; }
+    100% { left: 100%; }
+}
+
+@keyframes rightToLeft {
+    0% { right: -100px; }
+    100% { right: 100%; }
+}
+

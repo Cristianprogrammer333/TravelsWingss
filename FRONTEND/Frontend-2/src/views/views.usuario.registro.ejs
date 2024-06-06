@@ -1,0 +1,106 @@
+<%- include("partials/partials.dash.header.ejs", { datos : datos }) %>
+
+  <section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+      <div class="box-header with-border bg-green-active text-default">
+        <h3 class="box-title">Reservas Preferenciales</h3>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title=""
+            data-original-title="Collapse">
+            <i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title=""
+            data-original-title="Remove">
+            <i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="box-body">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- //columna 1 -->
+            <div class="form-group">
+              <label for="seat-classes">Selecciona una clase de asiento preferencial:</label>
+              <select id="clase" name="clase" class="form-control">
+                <option value="first-class">Primera Clase</option>
+                <option value="business-class">Clase Ejecutiva</option>
+                <option value="premium-economy">Economía Premium</option>
+                <option value="upper-class">Clase Superior</option>
+                <option value="luxury-suite">Suite de Lujo</option>
+                <option value="royal-suite">Suite Real</option>
+                <option value="sky-cabin">Cabina del Cielo</option>
+                <option value="exclusive-suite">Suite Exclusiva</option>
+                <option value="elite-class">Clase Elite</option>
+                <option value="club-class">Clase Club</option>
+              </select>
+
+            </div>
+            <div class="form-group">
+              <label for="airlines">Selecciona una aerolínea:</label>
+              <select id="aerolinea" name="aerolinea" class="form-control">
+                <option value="american">American Airlines</option>
+                <option value="delta">Delta Airlines</option>
+                <option value="emirates">Emirates</option>
+                <option value="iberia">Iberia</option>
+                <option value="latam">LATAM</option>
+                <option value="lufthansa">Lufthansa</option>
+                <option value="qatar">Qatar Airways</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!-- //columna 2 // -->
+            <div class="form-group">
+              <label for="countries">Selecciona un país:</label>
+              <select id="pais" name="pais" class="form-control">
+                <option value="argentina">Argentina</option>
+                <option value="australia">Australia</option>
+                <option value="brazil">Brasil</option>
+                <option value="canada">Canadá</option>
+                <option value="china">China</option>
+                <option value="france">Francia</option>
+                <option value="germany">Alemania</option>
+                <option value="india">India</option>
+                <option value="japan">Japón</option>
+                <option value="mexico">México</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="meals">Selecciona una comida:</label>
+              <select id="comidafavorita" name="comidafavorita"  class="form-control">
+                  <option value="standard">Comida Estándar</option>
+                  <option value="vegetarian">Comida Vegetariana</option>
+                  <option value="vegan">Comida Vegana</option>
+                  <option value="gluten-free">Comida Sin Gluten</option>
+                  <option value="lactose-free">Comida Sin Lactosa</option>
+                  <option value="kosher">Comida Kosher</option>
+                  <option value="halal">Comida Halal</option>
+                  <option value="diabetic">Comida para Diabéticos</option>
+                  <option value="low-sodium">Comida Baja en Sodio</option>
+                  <option value="child">Comida para Niños</option>
+                  <option value="seafood">Comida de Mariscos</option>
+                  <option value="fruit">Comida de Frutas</option>
+                  <option value="asian">Comida Asiática</option>
+                  <option value="mediterranean">Comida Mediterránea</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-app bg-green-active" onclick="GuardarReserva()">
+          <i class="fa fa-save"></i> Guardar
+        </button>
+      </div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+    </div>
+    <div class="box-footer">
+    </div>
+    <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- <script src="./js/main.js"></script> -->
+
+  <%- include("partials/partials.dash.footer.ejs") %>

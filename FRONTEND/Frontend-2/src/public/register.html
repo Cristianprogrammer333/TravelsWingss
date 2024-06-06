@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+
+  <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="./js/alertifyjs/css/alertify.min.css">
+  <link rel="shortcut icon" href="./img/aerolinea.png" type="image/x-icon">
+  <link rel="stylesheet" href="./js/alertifyjs/css/themes/bootstrap.min.css">
+</head>
+<body>
+  <div class="background-slider">
+    <div class="slide active" style="background-image: url('https://source.unsplash.com/1600x900/?airplane')"></div>
+    <div class="slide" style="background-image: url('https://source.unsplash.com/1600x900/?jet')"></div>
+    <div class="slide" style="background-image: url('https://source.unsplash.com/1600x900/?flight')"></div>
+    <div class="slide" style="background-image: url('https://source.unsplash.com/1600x900/?aircraft')"></div>
+  </div>
+  <div class="form-container">
+    <!-- <form class="registration-form"> -->
+        <h2>Travels Wings</h2>
+      <h4>Si no tienes una cuenta, registrate</h4>
+      <div class="form-group">
+        <label for="identificacion">Identificacion</label>
+        <input type="text" id="identificacion" name="id" required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contrasena</label>
+        <input type="password" id="contrasena" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Telefono</label>
+        <input type="tel" id="telefono" name="phone" required>
+      </div>
+      <button type="btn btn-default" onclick="GuardarUsuario()">Registrarse</button>
+      <p>
+        <a href="login.html" class="link">Iniciar sesión</a>
+      </p>
+    <!-- </form> -->
+  </div>
+  <script src="./js/alertifyjs/alertify.min.js"></script>
+  <script src="/js/main.js">
+  </script>
+</body>
+</html>
+

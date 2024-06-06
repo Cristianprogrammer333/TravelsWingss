@@ -1,0 +1,37 @@
+<%- include("partials/partials.dash.header.ejs")  %>
+
+<div class="box">
+    <div class="box-header with-border">
+      <h3 class="box-header">Solicitud de servicios especiales para usuarios con discapacidad</h3>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+      <div class="box-body">
+        <div class="form-group">
+          <label for="user_id">Identificacion</label>
+          <input type="number" class="form-control" id="user_id" placeholder="Usuarios">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" id="description" placeholder="Descripción de la Solicitud ">
+        </div>
+        <div class="form-group">
+          <label for="request_date">Fecha y hora de acompañamiento</label>
+          <input type="datetime-local" class="form-control" id="request_date" placeholder="Datos del servicio">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Check me out
+          </label>
+        </div>
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer">
+        <a  class="btn btn-bitbucket bg-gray-active" onclick="RegistrarServiciosEspeciales()">Solicitar Servicio</a>
+      </div>
+    </form>
+  </div>
+
+<%- include("partials/partials.dash.footer.ejs")  %>
+

@@ -1,0 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-image: url('https://example.com/tu-imagen-de-viajes.jpg'); /* Reemplaza esta URL con la URL de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.message h1 {
+    margin: 0;
+    color: #333;
+}
+
+.message p {
+    margin: 10px 0 0;
+    color: #666;
+}

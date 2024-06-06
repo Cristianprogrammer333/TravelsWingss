@@ -1,0 +1,75 @@
+<%- include("partials/partials.dash.header.ejs") %>
+
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+      <div class="box-header with-border bg-black-gradient">
+        <h3 class="box-title">Calendario</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+            <i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+            <i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="box-body">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Calendario Interactivo</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+            <style>
+                #eventModal {
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+            </style>
+        </head>
+        <body class="bg-gray-100">
+            <div class="container mx-auto mt-5">
+                <div class="flex justify-between items-center mb-4">
+                    <button id="prev" class="px-4 py-2 bg-blue-500 text-white rounded">Anterior</button>
+                    <div class="flex items-center">
+                        <h1 id="monthYear" class="text-2xl font-bold mr-2"></h1>
+                        <input type="number" id="yearInput" class="border p-1 w-20 text-center" min="1900" max="2100" step="1" value="">
+                        <button id="goToYear" class="ml-2 px-4 py-2 bg-blue-500 text-white rounded">Ir</button>
+                    </div>
+                    <button id="next" class="px-4 py-2 bg-blue-500 text-white rounded">Siguiente</button>
+                </div>
+                <div id="days" class="grid grid-cols-7 gap-2"></div>
+            </div>
+        
+            <div id="eventModal" class="hidden fixed inset-0 flex items-center justify-center z-50">
+                <div class="bg-white p-6 rounded-lg w-96">
+                    <h2 class="text-xl font-bold mb-4">Gestionar Evento</h2>
+                    <form id="eventForm">
+                        <input type="text" id="eventTitle" class="border p-2 w-full mb-4" placeholder="Título del evento" required>
+                        <textarea id="eventDescription" class="border p-2 w-full mb-4" placeholder="Descripción del evento" required></textarea>
+                        <div class="flex justify-between">
+                            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Guardar</button>
+                            <button type="button" id="deleteButton" class="bg-red-500 text-white px-4 py-2 rounded hidden">Eliminar</button>
+                            <button type="button" id="cancelButton" class="bg-gray-500 text-white px-4 py-2 rounded">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+            <script src="/js/calendario.js"></script>
+        </body>
+        </html>
+        
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer">
+      </div>
+      <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+
+  </section>
+
+
+<%- include("partials/partials.dash.footer.ejs") %>

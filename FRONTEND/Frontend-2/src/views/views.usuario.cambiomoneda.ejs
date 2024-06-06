@@ -1,0 +1,88 @@
+<%- include("partials/partials.dash.header.ejs")  %>
+
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+      <div class="box-header with-border bg-gray-active">
+        <h3 class="box-title">Travels Wings</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+            <i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+            <i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="box-body">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title data-i18n="title">Travel Booking System</title>
+          <link rel="stylesheet" href="/css/moneda.css">
+        </head>
+        <body>
+            <div class="container">
+              <h1 data-i18n="title">Travel Booking System</h1>
+              <div class="selection-box">
+                <label data-i18n="select_language">Selecione su idioma</label>
+                <select id="language-select">
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                  <option value="en">France</option>
+                  <option value="es">Italy</option>
+                  <option value="en">Japonese</option>
+                  <option value="es">Sueco</option>
+                  <option value="en">Portuguese</option>
+                  <option value="es">Polaques</option>
+                </select>
+              </div>
+              <div class="selection-box">
+                <label data-i18n="select_currency">Seleccione la moneda correspondiente</label>
+                <select id="currency-select">
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="JPY">ITL</option>
+                  <option value="JPY">CHF</option>
+                  <option value="JPY">RUB</option>
+                  <!-- Add more currencies as needed -->
+                </select>
+              </div>
+              <button id="book-now"><a href="/reserva" style="color: black;">Reservar ahora</a></button>
+              
+              <div class="complaint-box">
+                <h2 data-i18n="complaint_box">Buzón de quejas</h2>
+                <form id="complaint-form">
+                  <div>
+                    <label for="Nombre" data-i18n="Nombre">Nombre</label>
+                    <input type="text" id="Nombre" name="Nombre" required>
+                  </div>
+                  <div>
+                    <label for="Correo" data-i18n="Correo">Correo</label>
+                    <input type="email" id="Correo" name="Correo" required>
+                  </div>
+                  <div>
+                    <label for="Mensaje" data-i18n="Mensaje">Mensaje</label>
+                    <textarea id="Mensaje" name="Mensaje" required></textarea>
+                  </div>
+                  <button onclick="GuardarPeticion()">Guardar Peticion</button>
+                </form>
+              </div>
+            </div>
+          <script src="/js/main.js"></script>
+        </body>
+        </html>
+        
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer">
+      </div>
+      <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+
+  </section>
+
+<%- include("partials/partials.dash.footer.ejs")  %>

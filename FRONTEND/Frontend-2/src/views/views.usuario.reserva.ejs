@@ -1,0 +1,84 @@
+<%- include("partials/partials.dash.header.ejs")  %>
+
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+      <div class="box-header with-border bg-black-active">
+        <h3 class="box-title">Reservas</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+            <i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+            <i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="box-body bg-gray-active">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nombre">Nombres</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="">
+                  </div>
+                <div class="form-group">
+                    <label for="apellido">Apellidos</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="fecha_nacimiento" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="numero_telefono">Numero de telefono</label>
+                    <input type="number" class="form-control" id="numero_telefono" placeholder="">
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nacionalidad">Nacionalidad</label>
+                    <input type="text" class="form-control" id="nacionalidad" placeholder="">
+                  </div>
+                <div class="form-group">
+                    <label for="pasaporte">Numero de pasaporte(Visa si el destino lo requiere)</label>
+                    <input type="text" class="form-control" id="pasaporte" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="correo_electronico">Direccion de correo electronico</label>
+                    <input type="text" class="form-control" id="correo_electronico" placeholder="">
+                  </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                  <label for="fecha_reserva">Fecha Actual de la reserva</label>
+                  <input type="date" class="form-control" id="fecha_reserva" placeholder="">
+                </div>
+              <div class="form-group">
+                  <label for="origen">Origen</label>
+                  <input type="text" class="form-control" id="origen" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="destino">Destino</label>
+                  <input type="text" class="form-control" id="destino" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="estado">Estado</label>
+                  <input type="text" class="form-control" id="estado" placeholder="">
+                </div>
+          </div>
+        </div>
+        <a class="btn btn-app bg-black-active" onclick="RegistrarReservacion()">
+            <i class="fa fa-save"></i> Reservar
+          </a>
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer">
+      </div>
+      <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+
+  </section>
+
+<%- include("partials/partials.dash.footer.ejs")  %>
+

@@ -1,0 +1,119 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Usuarios</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+
+</head>
+<body> -->
+  <%- include("partials/partials.dash.header.ejs", { datos : datos })  %>
+       <!-- <h1><%= titulo  %></h1>
+       <h1>Registros de Usuarios</h1> -->
+       <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Lista de Usuarios</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+          <table border="5">
+            <tr>
+                <th>idusuario</th>
+                <th>Identificacion</th>
+                <th>Nombre</th>
+                <th>correo</th>
+                <th>contrasena</th>
+                <th>telefono</th>
+                <th>opciones</th>
+            </tr>
+            <% datos.forEach(function(registro){ %>
+              <tr>
+                <td><%= registro.idusuario %></td>
+                <td><%= registro.identificacion %></td>
+                <td><%= registro.nombre %></td>
+                <td><%= registro.correo %></td>
+                <td><%= registro.contrasena %></td>
+                <td><%= registro.telefono %></td>
+                <td>
+                  <button class="btn btn-warning"
+                    data-toggle="modal"
+                    data-target="#modal-warning"
+                    onclick="CargarUsuario(event)";
+                    >Modificar</button>
+                  </button>
+                  <button class="btn btn-danger" onclick="EliminaRegistro(event)">Elimina</button>
+                  <button class="btn btn-success" onclick="Reporte(event)">Reporte</button>
+                </td>
+              </tr>
+            <% }) %>
+            <div class="modal modal-warning fade" id="modal-warning">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modifica solo tus datos</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                          <!-- //columna 1 -->
+                          <div class="form-group">
+                              <label for="number">identificacion</label>
+                              <input type="number" class="form-control" id="identificacion" placeholder="Identificacion">
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Correo</label>
+                              <input type="email" class="form-control" id="correo" placeholder="Correo">
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Clave</label>
+                              <input type="password" class="form-control" id="contrasena" placeholder="Password">
+                            </div>
+                      </div>
+                      <div class="col-md-6">
+                          <!-- //columna 2 // -->
+                          <div class="form-group">
+                              <label for="text-default">Nombre</label>
+                              <input type="text" class="form-control" id="nombres" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Telefono</label>
+                              <input type="number" class="form-control" id="telefono" placeholder="Telefono">
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Confirmar Clave</label>
+                              <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Enter password">
+                            </div>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline"
+                    onclick="ModificarUsuario()">Guardar</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <!-- <script src="./js/main.js"></script> -->
+          </table>
+          <input type="hidden" id="idusuario">
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+        </div>
+        <!-- /.box-footer-->
+      </div>
+          <%- include("partials/partials.dash.footer.ejs")  %>
+<!-- </body>
+</html> -->

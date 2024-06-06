@@ -1,0 +1,118 @@
+/* Estilos para el contenedor de destinos */
+.content {
+    overflow-x: auto; /* Agregamos overflow-x: auto para habilitar el desplazamiento horizontal si los destinos se desbordan */
+    white-space: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+    padding: 20px; /* Añadimos un poco de espacio alrededor del contenedor */
+    display: flex; /* Usamos flexbox para alinear los destinos horizontalmente */
+    justify-content: flex-start; /* Alineamos los destinos al principio del contenedor */
+    gap: 20px; /* Agregamos espacio entre los destinos */
+}
+
+/* Estilos para cada destino */
+.destination {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Posición fija para cubrir toda la pantalla */
+    z-index: 1; /* Asegurar que el modal esté en la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+    background-color: #16eb67;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 40%;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.destination:hover {
+    transform: scale(1.05);
+}
+
+.destination img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.destination h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+    overflow: hidden; /* Evitar que el texto se desborde */
+    text-overflow: ellipsis; /* Si el texto es demasiado largo, mostrar puntos suspensivos */
+    white-space: nowrap; /* Evitar saltos de línea */
+}
+
+.destination p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+    overflow: hidden; /* Evitar que el texto se desborde */
+    text-overflow: ellipsis; /* Si el texto es demasiado largo, mostrar puntos suspensivos */
+    white-space: nowrap; /* Evitar saltos de línea */
+}
+
+
+.availability {
+    color: green;
+}
+
+.unavailability {
+    color: red;
+}
+
+/* Estilos para el botón de reservar */
+.btn-reservar {
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-reservar:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
